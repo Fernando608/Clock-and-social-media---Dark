@@ -1,0 +1,102 @@
+
+*{
+	margin-top: 14px;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Inconsolata', monospace;		
+	background: #0f0d0b;
+	overflow-y: hidden;
+}
+.container {
+	border: 10px solid rgb(0, 240, 0);
+	width: 450px;
+	height: 450px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color:#fff;
+	font-size: 46px;
+	border-radius: 50%;
+	background: rgb(0, 0, 0);
+	box-shadow: 
+		0 0 5px rgb(0, 240, 0),
+		0 0 10px rgb(0, 240, 0),
+		0 0 15px rgb(0, 240, 0);
+}
+.time {
+	font-size: 2em;
+	color:rgb(0, 240, 0);
+}
+.blink-colon {
+	animation: blink 1s infinite linear;
+}
+@keyframes blink {
+	0%, 100% {
+		opacity: 1;
+	}
+	30% {
+		opacity: 0.4;
+	}
+}
+.date-container {
+	margin-top: 6px;
+	font-size: 24px;
+	color: rgba(255,255,255,0.8)
+}
+
+
+.socialicons {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+.socialicons .icon{
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 5px 10px rgba(223, 219, 219, 0.726);
+    margin: 0 30px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.icon:after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+    position: absolute;
+    bottom: -80px;
+    left: 0;    
+    
+    transition: 0.2s;
+}
+.mail:after{
+    background: linear-gradient(to bottom, rgb(197, 34, 31, 1), rgb(230, 230, 230, 1));
+}
+.twitter:after{
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(17, 154, 251, 1));
+}
+.instagram:after{
+    background: linear-gradient(to bottom, rgb(239, 35, 0, 1), rgb(150,54,195,1));
+}
+.github:after{
+    background: linear-gradient(to bottom, rgb(27, 27, 34, 1), rgb(240, 246, 252,1));
+}
+.linkedin:after{
+    background: linear-gradient(to bottom, rgb(10, 102, 194, 1), rgb(255, 225, 225, 1));
+}
+.socialicons .icon:hover {
+    color: #fff;
+}
+a:hover::after {
+    bottom: 0;
+}
